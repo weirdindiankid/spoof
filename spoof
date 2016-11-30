@@ -1,11 +1,1 @@
-# Check current MAC address
-ifconfig en0 | grep ether
-
-# Tell airport to disassociate from the current network
-/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
-
-# Spoof the MAC address
-sudo ifconfig en0 ether aa:bb:cc:dd:ee:ff
-
-# Check current MAC address
-ifconfig en0 | grep ether
+sudo ifconfig en1 lladdr 00:aa:bb:cc:dd:ee
